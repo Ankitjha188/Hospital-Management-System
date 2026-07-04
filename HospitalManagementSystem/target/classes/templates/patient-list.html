@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Patient List</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h2>Patients</h2>
+        <a class="btn primary" th:href="@{/patients/add}">Add New Patient</a>
+    </div>
+
+    <form class="search-form" th:action="@{/patients/search}" method="get">
+        <input type="text"
+               name="keyword"
+               placeholder="Search by name, phone, or email"
+               th:value="${keyword}">
+        <button class="btn primary" type="submit">Search</button>
+        <a class="btn" th:href="@{/patients}">Reset</a>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Blood Group</th>
+            <th>Active</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="patient : ${patients}">
+            <td th:text="${patient.id}"></td>
+            <td th:text="${patient.name}"></td>
+            <td th:text="${patient.phone}"></td>
+            <td th:text="${patient.email}"></td>
+            <td th:text="${patient.address}"></td>
+            <td th:text="${patient.birthDate}"></td>
+            <td th:text="${patient.gender}"></td>
+            <td th:text="${patient.bloodGroup}"></td>
+            <td th:text="${patient.active ? 'Yes' : 'No'}"></td>
+            <td>
+                <a class="btn edit"
+                   th:href="@{/patients/edit/{id}(id=${patient.id})}">
+                    Edit
+                </a>
+                <a class="btn delete"
+                   th:href="@{/patients/delete/{id}(id=${patient.id})}"
+                   onclick="return confirm('Delete this patient?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

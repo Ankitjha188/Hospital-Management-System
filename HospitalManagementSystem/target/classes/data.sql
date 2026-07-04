@@ -1,0 +1,65 @@
+INSERT IGNORE INTO patient
+(name, phone, gender, birth_date, email, blood_group, address, active)
+VALUES
+('Aarav Sharma', '9876543210', 'Male', '1990-05-18', 'aarav.sharma@example.com', 'O_POSITIVE', 'Delhi', true),
+('Diya Patel', '9876543211', 'Female', '1995-08-20', 'diya.patel@example.com', 'A_POSITIVE', 'Ahmedabad', true),
+('Dishant Verma', '9876543212', 'Male', '1988-03-15', 'dishant.verma@example.com', 'A_POSITIVE', 'Indore', true),
+('Neha Iyer', '9876543213', 'Female', '1992-12-01', 'neha.iyer@example.com', 'AB_POSITIVE', 'Chennai', true),
+('Kabir Singh', '9876543214', 'Male', '1993-07-11', 'kabir.singh@example.com', 'O_POSITIVE', 'Lucknow', true);
+
+
+INSERT IGNORE INTO doctor (name, phone, email, specialization, joining_date, active) VALUES
+('Dr. Amit Sharma','9000000001','amit.sharma@hospital.com','Cardiology','2023-01-10',1),
+('Dr. Neha Verma','9000000002','neha.verma@hospital.com','Neurology','2023-01-12',1),
+('Dr. Rohit Singh','9000000003','rohit.singh@hospital.com','Orthopedics','2023-01-15',1),
+('Dr. Pooja Mehta','9000000004','pooja.mehta@hospital.com','Dermatology','2023-01-18',1),
+('Dr. Ankit Jain','9000000005','ankit.jain@hospital.com','Pediatrics','2023-01-20',1),
+('Dr. Kavita Rao','9000000006','kavita.rao@hospital.com','Gynecology','2023-01-22',1),
+('Dr. Suresh Kumar','9000000007','suresh.kumar@hospital.com','General Medicine','2023-01-25',1),
+('Dr. Ritu Malhotra','9000000008','ritu.malhotra@hospital.com','ENT','2023-01-28',1),
+('Dr. Arjun Patel','9000000009','arjun.patel@hospital.com','Radiology','2023-02-01',1),
+('Dr. Sneha Iyer','9000000010','sneha.iyer@hospital.com','Pathology','2023-02-03',1),
+
+('Dr. Vikram Joshi','9000000011','vikram.joshi@hospital.com','Cardiology','2023-02-05',1),
+('Dr. Anjali Nair','9000000012','anjali.nair@hospital.com','Neurology','2023-02-08',1),
+('Dr. Deepak Gupta','9000000013','deepak.gupta@hospital.com','Orthopedics','2023-02-10',1),
+('Dr. Swati Kulkarni','9000000014','swati.kulkarni@hospital.com','Dermatology','2023-02-12',1),
+('Dr. Karan Malhotra','9000000015','karan.malhotra@hospital.com','Pediatrics','2023-02-15',1),
+('Dr. Nidhi Saxena','9000000016','nidhi.saxena@hospital.com','Gynecology','2023-02-18',1),
+('Dr. Manish Tiwari','9000000017','manish.tiwari@hospital.com','General Medicine','2023-02-20',1),
+('Dr. Preeti Chawla','9000000018','preeti.chawla@hospital.com','ENT','2023-02-22',1),
+('Dr. Sanjay Mishra','9000000019','sanjay.mishra@hospital.com','Radiology','2023-02-25',1),
+('Dr. Aditi Banerjee','9000000020','aditi.banerjee@hospital.com','Pathology','2023-02-28',1),
+
+('Dr. Rakesh Yadav','9000000021','rakesh.yadav@hospital.com','Cardiology','2023-03-02',1),
+('Dr. Isha Kapoor','9000000022','isha.kapoor@hospital.com','Neurology','2023-03-05',1),
+('Dr. Mohit Bansal','9000000023','mohit.bansal@hospital.com','Orthopedics','2023-03-08',1),
+('Dr. Shalini Aggarwal','9000000024','shalini.aggarwal@hospital.com','Dermatology','2023-03-10',1),
+('Dr. Varun Khanna','9000000025','varun.khanna@hospital.com','Pediatrics','2023-03-12',1),
+('Dr. Rachna Goyal','9000000026','rachna.goyal@hospital.com','Gynecology','2023-03-15',1),
+('Dr. Prakash Deshmukh','9000000027','prakash.deshmukh@hospital.com','General Medicine','2023-03-18',1),
+('Dr. Sonal Puri','9000000028','sonal.puri@hospital.com','ENT','2023-03-20',1),
+('Dr. Nitin Ahuja','9000000029','nitin.ahuja@hospital.com','Radiology','2023-03-22',1),
+('Dr. Meenal Shah','9000000030','meenal.shah@hospital.com','Pathology','2023-03-25',1),
+
+('Dr. Ashok Pandey','9000000031','ashok.pandey@hospital.com','Cardiology','2023-03-28',1),
+('Dr. Tanya Roy','9000000032','tanya.roy@hospital.com','Neurology','2023-04-01',1),
+('Dr. Hemant Oberoi','9000000033','hemant.oberoi@hospital.com','Orthopedics','2023-04-03',1),
+('Dr. Riya Sen','9000000034','riya.sen@hospital.com','Dermatology','2023-04-05',1),
+('Dr. Akash Verma','9000000035','akash.verma@hospital.com','Pediatrics','2023-04-08',1),
+('Dr. Pankaj Soni','9000000036','pankaj.soni@hospital.com','Gynecology','2023-04-10',1),
+('Dr. Sunita Reddy','9000000037','sunita.reddy@hospital.com','General Medicine','2023-04-12',1),
+('Dr. Rahul Chatterjee','9000000038','rahul.chatterjee@hospital.com','ENT','2023-04-15',1),
+('Dr. Kunal Arora','9000000039','kunal.arora@hospital.com','Radiology','2023-04-18',1),
+('Dr. Bhavna Joshi','9000000040','bhavna.joshi@hospital.com','Pathology','2023-04-20',1),
+
+('Dr. Sameer Kulkarni','9000000041','sameer.kulkarni@hospital.com','Cardiology','2023-04-22',1),
+('Dr. Aishwarya Pillai','9000000042','aishwarya.pillai@hospital.com','Neurology','2023-04-25',1),
+('Dr. Tarun Sehgal','9000000043','tarun.sehgal@hospital.com','Orthopedics','2023-04-28',1),
+('Dr. Komal Bhatia','9000000044','komal.bhatia@hospital.com','Dermatology','2023-05-01',1),
+('Dr. Gaurav Mehra','9000000045','gaurav.mehra@hospital.com','Pediatrics','2023-05-03',1),
+('Dr. Nisha Kuldeep','9000000046','nisha.kuldeep@hospital.com','Gynecology','2023-05-05',1),
+('Dr. Alok Srivastava','9000000047','alok.srivastava@hospital.com','General Medicine','2023-05-08',1),
+('Dr. Shruti Khandelwal','9000000048','shruti.khandelwal@hospital.com','ENT','2023-05-10',1),
+('Dr. Vikas Malviya','9000000049','vikas.malviya@hospital.com','Radiology','2023-05-12',1),
+('Dr. Payal Doshi','9000000050','payal.doshi@hospital.com','Pathology','2023-05-15',1);

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    padding: 40px;
+}
+
+.container {
+    background: #ffffff;
+    max-width: 1350px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #f1f3f5;
+}
+
+.table th,
+.table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    font-weight: bold;
+    color: #333;
+}
+
+.table tr:hover {
+    background: #f9f9f9;
+}
+
+
+.table td:nth-child(5) {
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.table td:nth-child(6) {
+    white-space: nowrap;
+}
+
+
+.table th:last-child,
+.table td:last-child {
+    padding-left: 24px;
+    min-width: 180px;
+}
+
+
+.table td:last-child {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: #3498db;
+}
+
+.btn.edit {
+    background: #f39c12;
+}
+
+.btn.delete {
+    background: #e74c3c;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

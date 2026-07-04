@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctor List</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h2>Doctors</h2>
+        <a class="btn primary" th:href="@{/doctors/add}">Add New Doctor</a>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Specialization</th>
+            <th>Joining Date</th>
+            <th>Active</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="doctor : ${doctors}">
+            <td th:text="${doctor.id}"></td>
+            <td th:text="${doctor.name}"></td>
+            <td th:text="${doctor.phone}"></td>
+            <td th:text="${doctor.email}"></td>
+            <td th:text="${doctor.specialization}"></td>
+            <td th:text="${doctor.joiningDate}"></td>
+            <td th:text="${doctor.active ? 'Yes' : 'No'}"></td>
+            <td class="actions">
+                <a class="btn edit"
+                   th:href="@{/doctors/edit/{id}(id=${doctor.id})}">
+                    Edit
+                </a>
+                <a class="btn delete"
+                   th:href="@{/doctors/delete/{id}(id=${doctor.id})}"
+                   onclick="return confirm('Delete this doctor?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

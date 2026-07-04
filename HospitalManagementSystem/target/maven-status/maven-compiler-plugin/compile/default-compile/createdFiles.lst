@@ -1,0 +1,16 @@
+com\Lilac\HospitalManagementSystem\controller\PatientController.class
+com\Lilac\HospitalManagementSystem\service\PatientService.class
+com\Lilac\HospitalManagementSystem\HospitalManagementSystemApplication.class
+com\Lilac\HospitalManagementSystem\entity\Doctor.class
+com\Lilac\HospitalManagementSystem\entity\type\BloodGroupType.class
+com\Lilac\HospitalManagementSystem\service\AppointmentService.class
+com\Lilac\HospitalManagementSystem\entity\Appointment.class
+com\Lilac\HospitalManagementSystem\repository\PatientRepository.class
+com\Lilac\HospitalManagementSystem\controller\AppointmentController.class
+com\Lilac\HospitalManagementSystem\repository\AppointmentRepository.class
+com\Lilac\HospitalManagementSystem\service\DoctorService.class
+com\Lilac\HospitalManagementSystem\entity\Patient.class
+com\Lilac\HospitalManagementSystem\controller\AdminAppointmentController.class
+com\Lilac\HospitalManagementSystem\dto\BloodGroupCountRepositoryEntity.class
+com\Lilac\HospitalManagementSystem\controller\DoctorController.class
+com\Lilac\HospitalManagementSystem\repository\DoctorRepository.class

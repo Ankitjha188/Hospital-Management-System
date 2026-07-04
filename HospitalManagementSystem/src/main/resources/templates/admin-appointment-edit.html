@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Appointment</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Edit Appointment</h2>
+
+    <form class="form"
+          th:action="@{/admin/appointments/update/{id}(id=${appointment.id})}"
+          th:object="${appointment}"
+          method="post">
+
+        <label>Appointment ID</label>
+        <input type="text" th:value="${appointment.id}" readonly>
+
+        <label>Patient</label>
+        <select th:field="*{patient}" required>
+            <option th:each="patient : ${patients}"
+                    th:value="${patient.id}"
+                    th:text="${patient.name}">
+            </option>
+        </select>
+
+        <label>Doctor</label>
+        <select th:field="*{doctor}" required>
+            <option th:each="doctor : ${doctors}"
+                    th:value="${doctor.id}"
+                    th:text="${doctor.name + ' (' + doctor.specialization + ')'}">
+            </option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" th:field="*{appointmentDate}" required>
+
+        <label>Time</label>
+        <input type="time" th:field="*{appointmentTime}" required>
+
+        <label>Status</label>
+        <select th:field="*{status}">
+            <option value="BOOKED">BOOKED</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="CANCELLED">CANCELLED</option>
+        </select>
+
+        <div class="actions">
+            <button class="btn primary" type="submit">
+                Update
+            </button>
+            <a class="btn" th:href="@{/admin/appointments}">
+                Cancel
+            </a>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

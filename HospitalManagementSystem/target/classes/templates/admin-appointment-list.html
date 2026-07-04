@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Appointments</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h2>Appointments</h2>
+        <a class="btn primary" th:href="@{/appointments/add}">
+            Add Appointment
+        </a>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="appointment : ${appointments}">
+            <td th:text="${appointment.id}"></td>
+
+            <td th:text="${appointment.patient.name}"></td>
+
+            <td th:text="${appointment.doctor.name} + ' (' + ${appointment.doctor.specialization} + ')'"></td>
+
+            <td th:text="${appointment.appointmentDate}"></td>
+
+            <td th:text="${appointment.appointmentTime}"></td>
+
+            <td th:text="${appointment.status}"></td>
+
+            <td class="actions">
+                <a class="btn edit"
+                   th:href="@{/admin/appointments/edit/{id}(id=${appointment.id})}">
+                    Edit
+                </a>
+
+                <a class="btn delete"
+                   th:href="@{/admin/appointments/delete/{id}(id=${appointment.id})}"
+                   onclick="return confirm('Cancel this appointment?')">
+                    Cancel
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
